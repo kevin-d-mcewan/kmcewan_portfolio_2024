@@ -73,7 +73,7 @@ const Sidebar = () => {
           icon={faClose}
           color="#eaf4f4"
           size="3x"
-          claseName="close-icon"
+          className="close-icon"
         />
       </nav>
       {/* Unorderded List Social Media */}
