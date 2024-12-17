@@ -80,14 +80,6 @@
   }
 }
 
-.map-wrap {
-  background: rgba(8, 253, 216, 0.1);
-  float: right;
-  width: 53%;
-  height: 115%;
-  margin-top: -3%;
-}
-
 .leaflet-container {
   position: relative;
   width: 100%;
@@ -107,7 +99,7 @@
   width: 267px;
   padding: 20px;
   font-family: 'Helvetica';
-  font-size: 1rem;
+  font-size: 2rem;
   font-weight: 300;
   opacity: 0;
   animation: fadeIn 1s 1.5s;
@@ -124,6 +116,15 @@
       color: #f6fff8;
     }
   }
+}
+
+.map-wrap {
+  background: rgba(8, 253, 216, 0.1);
+  float: right;
+  width: 53%;
+  height: 115%;
+  margin-top: -3%;
+  border-radius: 10%;
 }
 
 @media screen and (max-width: 1200px) {

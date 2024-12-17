@@ -1,0 +1,41 @@
+{
+  "_comment": "normally use a form to recieve this data. A change to make later",
+  "portfolio": [
+    {
+      "cover": "../../public/portfoli_pages/portfolio_1/elden2D.jpg",
+      "title": "ELDEN 2D",
+      "description": "React, JSX, Tailwind, JEST",
+      "URL": "http://eldenring.com"
+    },
+    {
+      "cover": "../../public/portfoli_pages/portfolio_1/port_pic_1.png",
+      "title": "Fox in the Snow",
+      "description": "HTML, C#, JS, CSS",
+      "URL": "http://www.fox.com"
+    },
+    {
+      "cover": "../../public/portfoli_pages/portfolio_1/port_pic_1a",
+      "title": "Mask Bipedal Fox Monster",
+      "description": "SQL, MYSQL, React, Vue",
+      "URL": "http://www.maskmonster.com"
+    },
+    {
+      "cover": "../../public/portfoli_pages/portfolio_1/port_pic_1b.jpg",
+      "title": "Scary Angler Fish",
+      "description": "Angular, p5.js, Svelte",
+      "URL": "http://www.angular.com"
+    },
+    {
+      "cover": "../../public/portfoli_pages/portfolio_1/port_pic_1c.png",
+      "title": "Flying Triangle HD Pheonix",
+      "description": "HTML, C#, JS, CSS",
+      "URL": "http://www.pheonix.com"
+    },
+    {
+      "cover": "../../public/portfoli_pages/portfolio_1/port_pic_1d.png",
+      "title": "Flying Triangle HD Pheonix part 2",
+      "description": "React, JSX, Tailwind, JEST",
+      "URL": "http://www.flyingpheonix.com"
+    }
+  ]
+}

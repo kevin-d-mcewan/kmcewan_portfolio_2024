@@ -17,6 +17,8 @@ import {
   faSuitcase,
   faBars,
   faClose,
+  // faServer,
+  faFolderTree,
 } from '@fortawesome/free-solid-svg-icons'
 
 const Sidebar = () => {
@@ -43,17 +45,17 @@ const Sidebar = () => {
         {/* Navigation to the 'about' page */}
         <NavLink
           activeclassname="active"
-          className="about-link"
+          className={'about-link'}
           to="/about"
-          onClick={() => setShowNav(false)}
+          // onClick={() => setShowNav(false)}
         >
           <FontAwesomeIcon icon={faUser} color="#0D4843" />
         </NavLink>
-        {/* NavLink to 'GitHub' page */}
+        {/* NavLink to 'Portfolio' page */}
         <NavLink
           activeclassname="active"
           className={'portfolio-link'}
-          to="https://github.com/kevin-d-mcewan/"
+          to="/portfolio"
           onClick={() => setShowNav(false)}
         >
           <FontAwesomeIcon icon={faSuitcase} color="#0D4843" />
@@ -66,6 +68,15 @@ const Sidebar = () => {
           onClick={() => setShowNav(false)}
         >
           <FontAwesomeIcon icon={faEnvelope} color="#0D4843" />
+        </NavLink>
+        {/* Navigation Link to the 'Dashboard' page */}
+        <NavLink
+          activeclassname="active"
+          className={'dashboard-link'}
+          to="/dashboard"
+          onClick={() => setShowNav(false)}
+        >
+          <FontAwesomeIcon icon={faFolderTree} color="#0D4843" />
         </NavLink>
         {/* Close Button */}
         <FontAwesomeIcon
@@ -90,7 +101,11 @@ const Sidebar = () => {
         </li>
         {/* 'GITHUB' icon link */}
         <li>
-          <a href="https://www.github.com" target="_blank" rel="noreferrer">
+          <a
+            href="https://github.com/kevin-d-mcewan"
+            target="_blank"
+            rel="noreferrer"
+          >
             <FontAwesomeIcon
               icon={faGithub}
               color="#0D4843"
