@@ -14,7 +14,7 @@
       "URL": "http://www.fox.com"
     },
     {
-      "cover": "../../public/portfoli_pages/portfolio_1/port_pic_1a",
+      "cover": "../assets/images/port_proj_img/floppy_disk.svg",
       "title": "Mask Bipedal Fox Monster",
       "description": "SQL, MYSQL, React, Vue",
       "URL": "http://www.maskmonster.com"

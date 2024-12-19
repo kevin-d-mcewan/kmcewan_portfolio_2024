@@ -1,7 +1,7 @@
 .logo-container {
   z-index: 0;
-  width: 400px;
-  height: 609px;
+  width: 700px;
+  height: 600px;
   opacity: 0;
   position: absolute;
   top: 0;
@@ -13,7 +13,7 @@
   svg {
     width: 100%;
     height: auto;
-    bottom: 0;
+    bottom: 25;
     transform: rotateZ(30deg) !important;
   }
 
@@ -33,6 +33,6 @@
 
 .svg-container {
   // stroke: #eaf4f4;
-  stroke: pink;
+  stroke: #0d4843;
   stroke-width: 10;
 }
