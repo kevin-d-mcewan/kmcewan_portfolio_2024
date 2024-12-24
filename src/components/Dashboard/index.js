@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useState, useEffect } from 'react'
 import { getAuth, onAuthStateChanged } from 'firebase/auth'
 import Home from './home'
 import Login from '../Login'
@@ -17,7 +17,11 @@ const Dashboard = () => {
     })
   })
 
-  return <div>{user ? <Home /> : <Login />}</div>
+  return (
+    <>
+      <div>{user ? <Home /> : <Login />}</div>
+    </>
+  )
 }
 
 export default Dashboard

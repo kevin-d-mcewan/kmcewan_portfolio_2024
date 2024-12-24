@@ -13,9 +13,21 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* This is for the ' ../Dashboard/index.js  ' */
 .dashboard {
   margin-top: 200px;
   margin-left: 200px;
+}
+
+/* This is for the ' ../Dashboard/home.js ' */
+.dash-home {
+  margin-left: 200px;
+  margin-top: 200px;
+  margin-right: 200px;
+  background-color: #006466;
+  border: 1px solid #f6fff8;
+  color: #f6fff8;
+  display: flow-root;
 }
 
 @media screen and (max-width: 1200px) {
