@@ -39,6 +39,7 @@
       "react-app/jest"
     ]
   },
+  "homepage": "https://kevin-d-mcewan.github.io/kmcewan_portfolio_2024",
   "browserslist": {
     "production": [
       ">0.2%",
