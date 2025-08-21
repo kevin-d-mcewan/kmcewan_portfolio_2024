@@ -2,14 +2,12 @@ import React, { useEffect, useState } from 'react'
 import Loader from 'react-loaders'
 import AnimatedLetters from '../AnimatedLetters'
 import './index.scss'
-import portfolioData from '../../data/portfolio.json'
 import { getDocs, collection } from 'firebase/firestore'
 import { db } from '../../firebase'
 
 const Portfolio = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
   const [portfolio, setPortfolio] = useState([])
-  console.log(portfolioData)
 
   useEffect(() => {
     let timer = setTimeout(() => {

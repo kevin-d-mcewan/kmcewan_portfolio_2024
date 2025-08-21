@@ -1,6 +1,9 @@
 import { useRef } from 'react'
-import { auth, storage } from '../../firebase'
+import { auth, storage, db } from '../../firebase'
 import { ref, uploadBytes, getDownloadURL } from 'firebase/storage'
+import { addDoc } from 'firebase/firestore'
+import { collection } from 'firebase/firestore/lite'
+// import portfolio from '../Portfolio'
 
 const Home = () => {
   const form = useRef()
@@ -9,8 +12,11 @@ const Home = () => {
     e.preventDefault()
     // The '?' is to ensure there is no break in the value
     const name = form.current[0]?.value
+    // Selecting the 2nd item on the form
     const description = form.current[1]?.value
+    // Selecting the third item inputed on the form
     const url = form.current[2]?.value
+    // This is selecting the 4th item in the array and then the 1st file that is uploaded
     const image = form.current[3]?.files[0]
 
     // console.log(name, description, url, image)
@@ -29,7 +35,7 @@ const Home = () => {
             })
             // This is if there is an "ERROR" in the 'f(x)'
           },
-          () => {
+          (error) => {
             savePortfolio({
               name,
               description,
@@ -40,7 +46,7 @@ const Home = () => {
         )
         // This is if the upload from above is Unsuccessful "ERROR"
       },
-      () => {
+      (error) => {
         savePortfolio({
           name,
           description,
@@ -52,8 +58,13 @@ const Home = () => {
   }
 
   // This saves the current "PortfolioProject" you uploaded to 'Dashboard'
-  const savePortfolio = (portfolio) => {
-    console.log(portfolio)
+  const savePortfolio = async (portfolio) => {
+    try {
+      await addDoc(collection(db, 'portfolio'), portfolio)
+      window.location.reload(false)
+    } catch (error) {
+      alert('Failed to add portfolio')
+    }
   }
 
   return (
