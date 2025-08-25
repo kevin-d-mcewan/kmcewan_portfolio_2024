@@ -1,8 +1,7 @@
 {
   "files": {
-    "main.css": "/kmcewan_portfolio_2024/static/css/main.6e0e73a8.css",
-    "main.js": "/kmcewan_portfolio_2024/static/js/main.3223bce5.js",
-    "static/js/453.dcfa1a06.chunk.js": "/kmcewan_portfolio_2024/static/js/453.dcfa1a06.chunk.js",
+    "main.css": "/kmcewan_portfolio_2024/static/css/main.7cdd6745.css",
+    "main.js": "/kmcewan_portfolio_2024/static/js/main.9d348d7e.js",
     "static/media/helvetica-neu.ttf": "/kmcewan_portfolio_2024/static/media/helvetica-neu.8a19678078a6b21c8057.ttf",
     "static/media/LaBelleAurore.woff": "/kmcewan_portfolio_2024/static/media/LaBelleAurore.9c5433c64baa43d1d274.woff",
     "static/media/LaBelleAurore.woff2": "/kmcewan_portfolio_2024/static/media/LaBelleAurore.a83c1c58fd7e43972e4a.woff2",
@@ -13,12 +12,11 @@
     "static/media/KM_Logo_2.png": "/kmcewan_portfolio_2024/static/media/KM_Logo_2.3e638eb0868830ee8d5f.png",
     "static/media/CoolveticaRg-Regular.woff2": "/kmcewan_portfolio_2024/static/media/CoolveticaRg-Regular.7d1f3b1dd46ad6557a17.woff2",
     "index.html": "/kmcewan_portfolio_2024/index.html",
-    "main.6e0e73a8.css.map": "/kmcewan_portfolio_2024/static/css/main.6e0e73a8.css.map",
-    "main.3223bce5.js.map": "/kmcewan_portfolio_2024/static/js/main.3223bce5.js.map",
-    "453.dcfa1a06.chunk.js.map": "/kmcewan_portfolio_2024/static/js/453.dcfa1a06.chunk.js.map"
+    "main.7cdd6745.css.map": "/kmcewan_portfolio_2024/static/css/main.7cdd6745.css.map",
+    "main.9d348d7e.js.map": "/kmcewan_portfolio_2024/static/js/main.9d348d7e.js.map"
   },
   "entrypoints": [
-    "static/css/main.6e0e73a8.css",
-    "static/js/main.3223bce5.js"
+    "static/css/main.7cdd6745.css",
+    "static/js/main.9d348d7e.js"
   ]
 }
