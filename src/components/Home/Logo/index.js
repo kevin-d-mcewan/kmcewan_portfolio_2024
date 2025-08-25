@@ -1,8 +1,15 @@
 import { useEffect, useRef } from 'react'
-import gsap from 'gsap-trial'
-import DrawSVGPlugin from 'gsap-trial/DrawSVGPlugin'
+import { gsap } from 'gsap'
+import { useGSAP } from '@gsap/react'
+import { DrawSVGPlugin } from 'gsap/DrawSVGPlugin'
+// import DrawSVGPlugin from 'gsap-trial/DrawSVGPlugin'
 import K_McEwan_L from '../../../assets/images/K_McEwan_Logo.png'
 import './index.scss'
+
+// Register the hook to avoid React version discrepancies
+gsap.registerPlugin(useGSAP)
+
+// const container = useRef();
 
 const Logo = () => {
   const bgRef = useRef()
@@ -10,6 +17,7 @@ const Logo = () => {
   const solidLogoRef = useRef()
 
   useEffect(() => {
+    // gsap.registerPlugin(DrawSVGPlugin)
     gsap.registerPlugin(DrawSVGPlugin)
 
     gsap

@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script type=""text/javascript">
+      // Redirect all 404 requests back to index.html
+      var path = window.location.pathname;
+      var redirect = "/" + path.split("/").slice(2).join("/");
+      sessionStorage.redirect = redirect;
+      window.location.href = "/";
+    </script>
+  </head>
+</html>
