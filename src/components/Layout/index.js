@@ -8,7 +8,7 @@ const Layout = () => {
       <Sidebar />
       <div className="page">
         <span className="tags top-tags">&lt;body&gt;</span>
-
+        {/* 'Outlet' places the child route of what is on that page */}
         <Outlet />
         <span className="tags bottom-tags">
           &lt;/body&gt;
