@@ -35,15 +35,16 @@ const Sidebar = () => {
       <nav className={showNav ? 'mobile-show' : ''}>
         {/* Navigation Link to 'Homepage' */}
         <NavLink
+          onClick={() => setShowNav(false)}
           exact="true"
           activeclassname="active"
           to="/"
-          onClick={() => setShowNav(false)}
         >
           <FontAwesomeIcon icon={faHome} color="#0D4843" />
         </NavLink>
         {/* Navigation to the 'about' page */}
         <NavLink
+          onClick={() => setShowNav(false)}
           activeclassname="active"
           className={'about-link'}
           to="/about"
@@ -53,28 +54,29 @@ const Sidebar = () => {
         </NavLink>
         {/* NavLink to 'Portfolio' page */}
         <NavLink
+          onClick={() => setShowNav(false)}
           activeclassname="active"
           className={'portfolio-link'}
           to="/portfolio"
-          onClick={() => setShowNav(false)}
         >
           <FontAwesomeIcon icon={faSuitcase} color="#0D4843" />
         </NavLink>
         {/* Navigation Link to 'Contact' Page  */}
         <NavLink
+          onClick={() => setShowNav(false)}
+          onClickCapture={() => setShowNav(false)}
           activeclassname="active"
           className={'contact-link'}
           to="/contact"
-          onClick={() => setShowNav(false)}
         >
           <FontAwesomeIcon icon={faEnvelope} color="#0D4843" />
         </NavLink>
         {/* Navigation Link to the 'Dashboard' page */}
         <NavLink
+          onClick={() => setShowNav(false)}
           activeclassname="active"
           className={'dashboard-link'}
           to="/dashboard"
-          onClick={() => setShowNav(false)}
         >
           <FontAwesomeIcon icon={faFolderTree} color="#0D4843" />
         </NavLink>

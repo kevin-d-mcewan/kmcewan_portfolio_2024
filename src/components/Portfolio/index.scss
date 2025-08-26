@@ -108,3 +108,24 @@
     }
   }
 }
+
+@media screen and (max-width: 1200px) {
+  .container.portfolio-page {
+    width: 100%;
+    // padding between the portfolio images
+    padding: 20px;
+    // no scroll bars (horizontal)
+    box-sizing: border-box;
+
+    h1.page-title {
+      margin-left: 20px;
+      margin-top: 20px;
+    }
+
+    .image-box {
+      height: 200px;
+      // Only want 2 boxes per row (not 4 like normal size)
+      max-width: calc(50% - 10px);
+    }
+  }
+}

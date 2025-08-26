@@ -30,6 +30,8 @@ body {
   display: flow-root;
 }
 
+
+/* Mobile Optimization (responsive) */
 @media screen and (max-width: 1200px) {
   body {
     overflow: visible;

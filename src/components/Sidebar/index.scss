@@ -97,7 +97,7 @@
 
     a.dashboard-link {
       &:after {
-        content: 'DASHBOARD'
+        content: 'DASHBOARD';
       }
     }
 
@@ -182,6 +182,10 @@
       a svg {
         opacity: 1 !important;
       }
+
+      &.mobile-show {
+        display: block;
+      }
     }
 
     .hamburger-icon,
@@ -193,3 +197,47 @@
     }
   }
 }
+
+// Mobile (responsiveness) Optimization
+
+// @media screen and (max-width: 1200px) {
+//   .nav-bar {
+//     background: transparent;
+//     position: relative;
+//     height: auto;
+//     min-height: auto;
+
+//     ul,
+//     nav {
+//       display: none;
+//     }
+
+//     nav {
+//       //display: block;
+//       width: 100%;
+//       height: 100%;
+//       background: pink;
+//       top: 0;
+//       left: 0;
+//       position: fixed;
+//       z-index: 2;
+//       margin: 0;
+//       a {
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
+//       }
+
+//       a:after {
+//         opacity: 1;
+//         position: initial;
+//         width: auto;
+//         margin-left: 10px;
+//       }
+
+//       a svg {
+//         opacity: 1 !important;
+//       }
+//     }
+//   }
+// }

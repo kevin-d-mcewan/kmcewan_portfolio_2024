@@ -79,3 +79,15 @@
     transform: rotateX(90deg);
   }
 }
+
+// Mobile Responsiveness Optimization
+
+@media screen and (max-width: 1200px) {
+  // Spinning Cube for Mobile Layout
+  .stage-cube-cont {
+    position: initial;
+    width: 100%;
+    height: 0;
+    overflow: visible;
+  }
+}
