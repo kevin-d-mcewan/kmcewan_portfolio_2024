@@ -89,14 +89,23 @@
   //   width: 100%;
   //   height: 0;
   //   overflow: visible;
-  //   background-color: pink;
   // }
   .stage-cube-cont {
     //position: static;
     width: 100%;
+    //height: 100%;
     overflow: visible;
     top: 200px;
     position: absolute;
-    background-color: pink;
+  }
+  @media screen and (max-width: 600px) {
+    .stage-cube-cont {
+      top: 250px;
+    }
+    @media screen and (max-width: 480px) {
+      .stage-cube-cont {
+        top: 300px;
+      }
+    }
   }
 }
