@@ -16,7 +16,7 @@
       display: block;
       clear: both;
       position: relative;
-      animation: fadeInUp 2s 2s;
+      animation: fadeInUp 3s 3s;
       animation-fill-mode: forwards;
     }
 
@@ -78,6 +78,8 @@
       color: #f6fff8;
     }
   }
+
+  
 }
 
 .leaflet-container {
@@ -137,6 +139,11 @@
   }
 
   .info-map {
-    display: none;
+    display: none;      
+  }
+
+  input,
+  textarea {
+    font-family: 'Helvetica Neue', sans-serif;
   }
 }

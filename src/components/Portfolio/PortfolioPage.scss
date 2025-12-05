@@ -1,0 +1,69 @@
+/* src/components/Portfolio/PortfolioPage.sass */
+// *** GRID SASS *** /
+.page {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  /* OG Stuff up top || New Stuff Below with Scroll bar */
+
+  min-height: 100vh; // Ensures it fills at least the viewport
+  overflow-y: scroll; // Force a scrollbar if content overflows
+  margin: 0;
+  padding: 0;
+
+  // Making scrollbar invisible * Firefox & IE *
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+// Making scrollbar invisible * Chrome/Safari *
+.page::-webkit-scrollbar {
+  display: none;
+  width: none;
+}
+
+.portfolio-section {
+  padding: 4rem 2rem 6rem 2rem;
+  text-align: center;
+  transform: translate(80px, -8%); // moved portfolio card 80px right and 8% up
+  opacity: 0;
+  animation: fadeIn 1s 1.5s;
+  animation-fill-mode: forwards;
+}
+
+.portfolio-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  background-color: aqua;
+}
+
+.portfolio-grid {
+  padding: 0;
+  display: grid;
+  /* This is the key: creates 3 columns, but minimum 300px wide */
+  /* It will auto-fit as many 300px+ cards as it can */
+  grid-template-columns: repeat(auto-fit, minmax(300px, lfr));
+  max-width: 1200px;
+  margin: 0 auto; /* Center the Grid */
+  fill: aqua;
+  gap: 3rem;          /* This sets the spacing between the projects (horizontal space)*/
+}
+
+@media screen and (max-width: 1200px) {
+  .map-wrap {
+    float: none;
+    margin: 0;
+    width: 100%;
+    height: 400px;
+    //overflow: visible;
+  }
+
+  .info-map {
+    display: none;
+  }
+
+  input,
+  textarea {
+    font-family: 'Helvetica Neue', sans-serif;
+  }
+}

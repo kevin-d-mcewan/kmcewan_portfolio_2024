@@ -1,7 +1,7 @@
-import { useState, useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { getAuth, onAuthStateChanged } from 'firebase/auth'
-import Home from './home'
-import Login from '../Login'
+import UploadItem from './home'
+import Login from '../Login/old_build/index'
 
 const Dashboard = () => {
   const [user, setUser] = useState(null)
@@ -15,13 +15,9 @@ const Dashboard = () => {
         setUser(null)
       }
     })
-  })
+  }, [])
 
-  return (
-    <>
-      <div>{user ? <Home /> : <Login />}</div>
-    </>
-  )
+  return <div>{user ? <UploadItem /> : <Login />}</div>
 }
 
 export default Dashboard

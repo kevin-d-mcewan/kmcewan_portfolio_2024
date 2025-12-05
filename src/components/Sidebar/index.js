@@ -18,7 +18,7 @@ import {
   faBars,
   faClose,
   // faServer,
-  faFolderTree,
+  //faFolderTree,
 } from '@fortawesome/free-solid-svg-icons'
 
 const Sidebar = () => {
@@ -72,14 +72,15 @@ const Sidebar = () => {
           <FontAwesomeIcon icon={faEnvelope} color="#0D4843" />
         </NavLink>
         {/* Navigation Link to the 'Dashboard' page */}
-        <NavLink
+        {/* Under construction: Will put in once updated down the line*/}
+        {/* <NavLink
           onClick={() => setShowNav(false)}
           activeclassname="active"
           className={'dashboard-link'}
           to="/dashboard"
         >
           <FontAwesomeIcon icon={faFolderTree} color="#0D4843" />
-        </NavLink>
+        </NavLink> */}
         {/* Close Button */}
         <FontAwesomeIcon
           onClick={() => setShowNav(false)}
@@ -112,11 +113,11 @@ const Sidebar = () => {
             target="_blank"
             rel="noreferrer"
           >
-            <FontAwesomeIcon
-              icon={faGithub}
-              color="#0D4843"
-              className="anchor-icon"
-            />
+              <FontAwesomeIcon
+                icon={faGithub}
+                color="#0D4843"
+                className="anchor-icon"
+              />
           </a>
         </li>
         {/* 'YOUTUBE' icon link */}

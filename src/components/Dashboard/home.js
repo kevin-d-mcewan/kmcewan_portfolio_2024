@@ -1,92 +1,84 @@
-import { useRef } from 'react'
-import { auth, storage, db } from '../../firebase'
-import { ref, uploadBytes, getDownloadURL } from 'firebase/storage'
-import { addDoc } from 'firebase/firestore'
+import React, { useState } from 'react'
+//import { auth, storage, db } from '../../firebase'
+import {
+  getStorage,
+  ref,
+  uploadBytesResumable,
+  getDownloadURL,
+ // uploadBytes,
+} from 'firebase/storage'
+import { getFirestore, addDoc, serverTimestamp } from 'firebase/firestore'
 import { collection } from 'firebase/firestore/lite'
-// import portfolio from '../Portfolio'
+import './index.scss'
 
-const Home = () => {
-  const form = useRef()
+export default function UploadItem() {
+  const [file, setFile] = useState(null)
+  const [title, setTitle] = useState('')
+  const [description, setDiscription] = useState('')
+  const [progress, setProgress] = useState(0)
 
-  const submitPortfolio = (e) => {
-    e.preventDefault()
-    // The '?' is to ensure there is no break in the value
-    const name = form.current[0]?.value
-    // Selecting the 2nd item on the form
-    const description = form.current[1]?.value
-    // Selecting the third item inputed on the form
-    const url = form.current[2]?.value
-    // This is selecting the 4th item in the array and then the 1st file that is uploaded
-    const image = form.current[3]?.files[0]
+  const storage = getStorage()
+  const db = getFirestore()
 
-    // console.log(name, description, url, image)
+  const handleUpload = async () => {
+    if (!file || !title || !description) return alert('Fill all fields!')
 
-    // This is to get the image and the image was successfully downloaded to page
-    const storageRef = ref(storage, `portfolio/${image.name}`)
-    uploadBytes(storageRef, image).then(
+    const fileRef = ref(storage, `portfolio/${file.name}`) // said 'uploads' prior to 'portfolio'
+    const uploadTask = uploadBytesResumable(fileRef, file)
+
+    uploadTask.on(
+      'state_changed',
       (snapshot) => {
-        getDownloadURL(snapshot.ref).then(
-          (downloadUrl) => {
-            savePortfolio({
-              name,
-              description,
-              url,
-              image: downloadUrl,
-            })
-            // This is if there is an "ERROR" in the 'f(x)'
-          },
-          (error) => {
-            savePortfolio({
-              name,
-              description,
-              url,
-              image: null,
-            })
-          }
-        )
-        // This is if the upload from above is Unsuccessful "ERROR"
+        const prog = (snapshot.bytesTransferred / snapshot.totalBytes) * 100
+        setProgress(prog.toFixed(0))
       },
-      (error) => {
-        savePortfolio({
-          name,
+      (error) => console.error(error),
+      async () => {
+        const url = await getDownloadURL(uploadTask.snapshot.ref)
+
+        // Save metadata in Firestore
+        await addDoc(collection(db, 'items'), {
+          title,
           description,
-          url,
-          image: null,
+          imageURL: url,
+          createdAt: serverTimestamp(),
         })
+
+        setFile(null)
+        setTitle('')
+        setDiscription('')
+        setProgress(0)
+        alert('Item uploaded successfully!')
       }
     )
   }
 
-  // This saves the current "PortfolioProject" you uploaded to 'Dashboard'
-  const savePortfolio = async (portfolio) => {
-    try {
-      await addDoc(collection(db, 'portfolio'), portfolio)
-      window.location.reload(false)
-    } catch (error) {
-      alert('Failed to add portfolio')
-    }
-  }
-
   return (
-    <div className="dash-home">
-      <form ref={form} onSubmit={submitPortfolio}>
-        <p>
-          <input type="text" placeholder="Name" />
-        </p>
-        <p>
-          <textarea placeholder="Description" />
-        </p>
-        <p>
-          <input type="text" placeholder="URL" />
-        </p>
-        <p>
-          <input type="file" placeholder="Image" />
-        </p>
-        <button type="submit">Submit</button>
-        <button onClick={() => auth.signOut}>Sign out</button>
-      </form>
+    <div className="upload-container">
+      <h2>Upload Item</h2>
+
+      <input type="file" onChange={(e) => setFile(e.target.files[0])} />
+      <br />
+      <br />
+      <input
+        type="text"
+        placeholder="Title"
+        value={title}
+        onChange={(e) => setTitle(e.target.value)}
+      />
+      <br />
+      <br />
+      <textarea
+        placeholder="Description"
+        value={description}
+        onChange={(e) => setDiscription(e.target.value)}
+      />
+      <br />
+      <br />
+
+      <button onClick={handleUpload}>Upload</button>
+
+      {progress > 0 && progress < 100 && <p>Uploading: {progress}%</p>}
     </div>
   )
 }
-
-export default Home

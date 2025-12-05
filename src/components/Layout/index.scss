@@ -2,11 +2,7 @@
   width: 100%;
   height: 100%;
   position: absolute;
-}
-
-.top-tags {
-  bottom: auto;
-  top: 35px;
+  /* OG Stuff up top || New Stuff Below with Scroll bar */
 }
 
 .tags {
@@ -18,6 +14,22 @@
   left: 120px;
   font-size: 18px;
   font-family: 'La Belle Aurore';
+}
+
+.top-tag-html {
+  margin-top: -300px;
+  margin-left: 100px !important;
+  top: 15px;
+  position: relative;
+  //background-color: 006466; //TODO: Change to Different Color
+  font-family: 'La Belle Aurore';
+  font-size: 18px;
+  color: #006466;
+}
+
+.top-tags {
+  bottom: auto;
+  top: 35px;
 }
 
 .bottom-tag-html {

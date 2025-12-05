@@ -11,6 +11,8 @@ import { getFirestore } from 'firebase/firestore/lite'
 const firebaseConfig = {
   apiKey: 'AIzaSyBo80O_9JicIhcY6OF02W84Dsr7y5a__Bw',
   authDomain: 'react-portfolio-dashboar-44560.firebaseapp.com',
+  databaseURL:
+    'https://react-portfolio-dashboar-44560-default-rtdb.firebaseio.com',
   projectId: 'react-portfolio-dashboar-44560',
   storageBucket: 'react-portfolio-dashboar-44560.firebasestorage.app',
   messagingSenderId: '338770020868',

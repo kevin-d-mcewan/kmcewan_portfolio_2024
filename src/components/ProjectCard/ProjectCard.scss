@@ -1,0 +1,62 @@
+.project-card {
+  background-color: #181818;
+  border-radius: 2rem;
+  box-shadow: 1.5rem 1.5rem 2rem rgb(7, 69, 35); //rgba(10, 30, 255, 0.8);
+  transition: transform 1.5 ease, box-shadow 0.3 ease;
+}
+
+/* This is hover effect */
+.project-card:hover {
+  transform: translateY(-5px); // Lifts the card up slightly
+  box-shadow: 2rem 1.5rem 1.5rem #09210b;
+}
+
+.project-image {
+  padding-top: 2rem;
+  width: 600px;
+  height: 200px; /* Fixed height for all images */
+  object-fit: contain;
+  transform: scaleX(2); // Ensures image covers the area without distortion
+}
+
+.project-info {
+  padding: 0.5 rem;
+}
+
+.project-title {
+  font-size: 5rem; //   1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  color: #8ec3c3;
+}
+
+.project-description {
+  font-size: 1.5rem; // 0.9rem;
+  color: #6b9080;
+  //color: #0d4843;
+  margin-bottom: 1rem;
+}
+
+.project-links {
+  display: flex;
+  gap: 1rem;
+  padding-bottom: 2rem;
+  padding-left: 2rem;
+  font-size: 1.5rem;
+}
+
+.project-link {
+  text-decoration: none;
+  font-weight: 500;
+  color: #f6fff8; // Highlight Color
+}
+
+.project-link:hover {
+  text-decoration: underline;
+}
+
+anchor-icon.active {
+  svg {
+    color: PINK;
+  }
+}
