@@ -4,6 +4,7 @@ import { React } from 'react'
 import './ProjectCard.scss' //We'll create this file for styling
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
+import ProjectSlider from '../ProjectSlider/ProjectSlider'
 
 function ProjectCard({ title, description, image, technologies, githubUrl }) {
   return (

@@ -2,9 +2,11 @@
 
 import { React } from 'react'
 import Loader from 'react-loaders'
-import { projects } from '../../data/projects' // Importing Data
-import ProjectCard from '../ProjectCard/ProjectCard'
-import './PortfolioPage.scss' // Creating Grid Layer
+import { projects } from '../../data/projects'                        // Importing Data
+import ProjectCard from '../ProjectCard/ProjectCard'                // ProjCard Component *import*
+import ProjectSlider from '../ProjectSlider/ProjectSlider'         // ProjSlider component *import*
+import './PortfolioPage.scss'                                     // Creating Grid Layer *import*
+
 
 function PortfolioPage() {
   return (

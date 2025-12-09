@@ -43,26 +43,41 @@ export default function ProjectSlider() {
   ]
 
   return (
-    <div style={{ maxWidth: '900px', margin: '0 auto' }}>
+    <div className="project-slider-wrapper fade-in">
       <Splide
         options={{
-          type: 'logo',
+          type: 'loop',
           perPage: 3,
-          gap: '1rem',
-          pagination: true,
-          arrows: true,
+          gap: '2rem',
           breakpoints: {
             1024: { perPage: 2 },
             640: { perPage: 1 },
           },
         }}
       >
-        {projects.map((p, index) => (
+        {projects.map((project, index) => (
           <SplideSlide key={index}>
-            <div className="project-card">
-              <img src={p.image} alt={p.title} className="project-img" />
-              <h3>{p.title}</h3>
-              <p>{p.description}</p>
+            <div className="glass-card hover-anim">
+              {/* Inner image slider */}
+              <Splide
+                options={{
+                  type: 'loop',
+                  perPage: 1,
+                  arrows: true,
+                  pagination: true,
+                }}
+              >
+                {project.images.map((src, i) => (
+                  <SplideSlide key={i}>
+                    <img src={src} alt="" className="card-img" />
+                  </SplideSlide>
+                ))}
+              </Splide>
+
+              <div className="card-content">
+                <h3>{project.title}</h3>
+                <p>{project.description}</p>
+              </div>
             </div>
           </SplideSlide>
         ))}
