@@ -1,28 +1,30 @@
 .project-card {
+  font-size: 20px;
   background-color: #181818;
-  border-radius: 2rem;
-  box-shadow: 1.5rem 1.5rem 2rem rgb(7, 69, 35); //rgba(10, 30, 255, 0.8);
+  /* border-radius: 12px; */
+  padding: 4rem;
+  text-align: center;
+  /* box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); */
+  height: 50rem;
+
+  border-radius: 30px 30px 30px 30px;
+  box-shadow: 1.5rem 1.5rem 3rem rgb(7, 69, 35, 0.8);
   transition: transform 1.5 ease, box-shadow 0.3 ease;
 }
 
-/* This is hover effect */
-.project-card:hover {
-  transform: translateY(-5px); // Lifts the card up slightly
-  box-shadow: 2rem 1.5rem 1.5rem #09210b;
-}
-
-.project-image {
-  padding-top: 0rem;
-  padding-bottom: 12rem;
+// The image of the project
+.project-img {
+  padding-top: 2rem;
   width: 600px;
-  height: 200px; /* Fixed height for all images */
+  height: 20em; /* Fixed height for all images */
   object-fit: contain;
   transform: scaleX(2); // Ensures image covers the area without distortion
 }
 
-.project-info {
-  padding: 0.5 rem;
-}
+// .project-card:hover {
+//   transform: translateY(-5px); // Lifts the card up slightly
+//   box-shadow: 2rem 1.5rem 1.5rem #09210b;
+// }
 
 .project-title {
   font-size: 5rem; //   1.25rem;
@@ -49,7 +51,7 @@
 .project-link {
   text-decoration: none;
   font-weight: 500;
-  color: #f6fff8; // Highlight Color
+  color: pink; // Highlight Color
 }
 
 .project-link:hover {

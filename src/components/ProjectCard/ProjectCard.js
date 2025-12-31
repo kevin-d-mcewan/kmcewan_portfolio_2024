@@ -1,10 +1,14 @@
 // src/comonents/ProjectCard/ProjectCard.jsx
 
 import { React } from 'react'
+import { Splide, SplideSlide } from '@splidejs/react-splide'
+import { AutoScroll } from '@splidejs/splide-extension-auto-scroll'
+import '@splidejs/react-splide/css'
 import './ProjectCard.scss' //We'll create this file for styling
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
-import ProjectSlider from '../ProjectSlider/ProjectSlider'
+
+import ImageSlider from '../ImageSlider/ImageSlider'
 
 function ProjectCard({ title, description, image, technologies, githubUrl }) {
   return (

@@ -7,7 +7,6 @@ import BaseballQuiz3_PNG from '../assets/images/project_images/BaseballQuiz_Unit
 import BaseballQuiz4_PNG from '../assets/images/project_images/BaseballQuiz_Unity/Baseball_Quiz_WrongAnswer.png'
 import AstroidAvoid_PNG from '../assets/images/project_images/AstroidAvoider_Unity_Game/Astroid_Avoider_UnityAndGameView.png'
 import AstroidAvoid_SVG from '../assets/images/project_images/AstroidAvoider_Unity_Game/Astroid_Avoider_UnityAndGameView.svg'
-import PCT_SS1_PNG from '../assets/images/project_images/PitchCountTracker_iOS_App/PCT_WatchOS_SimSS_1_PNG.png'
 import PCT_SS2_SVG from '../assets/images/project_images/PitchCountTracker_iOS_App/PCT_WatchOS_SimSS_2_SVG.svg'
 import PCT_SS3_SVG from '../assets/images/project_images/PitchCountTracker_iOS_App/PCT_WatchOS_SimSS_3_SVG.svg'
 import PCT_SS4_SVG from '../assets/images/project_images/PitchCountTracker_iOS_App/PCT_WatchOS_SimSS_4_SVG.svg'

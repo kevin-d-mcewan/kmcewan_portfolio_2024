@@ -2,31 +2,17 @@
 
 import { React } from 'react'
 import Loader from 'react-loaders'
-import { projects } from '../../data/projects'                        // Importing Data
-import ProjectCard from '../ProjectCard/ProjectCard'                // ProjCard Component *import*
-import ProjectSlider from '../ProjectSlider/ProjectSlider'         // ProjSlider component *import*
-import './PortfolioPage.scss'                                     // Creating Grid Layer *import*
+import { projects } from '../../data/projects' // Importing Data
+import ProjectCard from '../ProjectCard/ProjectCard' // ProjCard Component *import*
 
+import './PortfolioPage.scss' // Creating Grid Layer *import*
+import ImageSlider from '../ImageSlider/ImageSlider'
+import '../ImageSlider/ImageSlider.scss'
 
 function PortfolioPage() {
   return (
     <div>
-      <section className="portfolio-section">
-        <h2>My Projects</h2>
-        <div className="portfolio-grid">
-          {projects.map((project, index) => (
-            <ProjectCard
-              key={index}
-              title={project.title}
-              description={project.description}
-              image={project.image}
-              technologies={project.technologies}
-              githubUrl={project.githubUrl}
-            />
-          ))}
-        </div>
-      </section>
-      <Loader type="ball-pulse-rise" />
+      <ImageSlider />
     </div>
   )
 }
