@@ -7,7 +7,7 @@
   /* OG Stuff up top || New Stuff Below with Scroll bar */
 
   min-height: 100vh; // Ensures it fills at least the viewport
-  overflow-y: scroll; // Force a scrollbar if content overflows
+  overflow-y: hidden; // Force a scrollbar if content overflows
   margin: 0;
   padding: 0;
 
@@ -46,7 +46,7 @@
   max-width: 1200px;
   margin: 0 auto; /* Center the Grid */
   fill: aqua;
-  gap: 3rem;          /* This sets the spacing between the projects (horizontal space)*/
+  gap: 3rem; /* This sets the spacing between the projects (horizontal space)*/
 }
 
 @media screen and (max-width: 1200px) {

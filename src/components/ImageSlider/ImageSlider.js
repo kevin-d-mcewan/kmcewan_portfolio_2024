@@ -75,7 +75,7 @@ export default function ImageSlider() {
         options={{
           // we have for that project // May need to change some of the options per project. i.e. 'perPage: 3' to how many pics
           type: 'loop',
-          perPage: 3,
+          perPage: 1,
           autoplay: false,
           gap: '3rem',
           direction: TTB,
@@ -96,7 +96,7 @@ export default function ImageSlider() {
                   //type: 'loop',
                   perPage: 1,
                   arrows: true,
-                  //height: '600px',
+                  height: '30rem',
                   pagination: true,
                   autoHeight: true,
                 }}
