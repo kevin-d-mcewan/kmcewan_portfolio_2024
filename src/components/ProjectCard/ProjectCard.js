@@ -30,6 +30,7 @@ function ProjectCard({ title, description, image, technologies, githubUrl }) {
             className="project-link"
             activeclassname="active"
           >
+            
             GitHub
             <FontAwesomeIcon
               icon={faGithub}

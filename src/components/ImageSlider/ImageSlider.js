@@ -1,5 +1,8 @@
-import { Splide, SplideSlide } from '@splidejs/react-splide'
+import { Splide, SplideSlide, SplideTrack } from '@splidejs/react-splide'
 import { AutoScroll } from '@splidejs/splide-extension-auto-scroll'
+import Intersection from '@splidejs/splide-extension-intersection'
+import { URLHash } from '@splidejs/splide-extension-url-hash';
+import '@splidejs/splide/dist/css/splide.min.css';
 import '@splidejs/react-splide/css'
 import Baseball1 from '../../assets/images/project_images/BaseballQuiz_Unity/Baseball_Quiz_CorrectAnswer.svg'
 import Baseball2 from '../../assets/images/project_images/BaseballQuiz_Unity/Baseball_Quiz_FinalScore.svg'
@@ -70,6 +73,11 @@ export default function ImageSlider() {
       className="project-holder"
       style={{ maxWidth: '1200px', margin: '0 auto', background: 'pink' }}
     >
+    {/* <SplideTrack
+      options={{
+
+      }}
+      > */}
       <Splide
         // TODO: Change Options
         options={{
@@ -112,9 +120,11 @@ export default function ImageSlider() {
               <p className="project-technologies">{project.technologies}</p>
               <div className="project-repo">
                 {project.repo}
+                &nbsp;
+                &nbsp;
                 <FontAwesomeIcon
                   icon={faGithub}
-                  color="pink"
+                  color="red"
                   className="anchor-icon"
                 />
               </div>
@@ -122,6 +132,7 @@ export default function ImageSlider() {
           </SplideSlide>
         ))}
       </Splide>
+      {/* </SplideTrack> */}
     </div>
   )
 }

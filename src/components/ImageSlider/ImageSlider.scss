@@ -16,7 +16,7 @@ html {
   border-radius: 30px 30px 30px 30px;
   box-shadow: 1.5rem 1.5rem 3rem rgb(7, 69, 35, 0.8);
   transition: transform 1.5 ease, box-shadow 0.3 ease;
-  overflow: hidden;
+  //overflow: hidden;
 }
 
 // The image of the project
@@ -64,7 +64,7 @@ html {
 .project-link {
   text-decoration: none;
   font-weight: 500;
-  color: pink; // Highlight Color
+  //color: pink; // Highlight Color
 }
 
 .project-link:hover {
@@ -75,4 +75,18 @@ anchor-icon.active {
   svg {
     color: PINK;
   }
+}
+
+.splide__arrow {
+  background: red;
+  border: none;
+  color: yellow;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
