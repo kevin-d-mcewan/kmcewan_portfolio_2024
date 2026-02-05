@@ -7,7 +7,7 @@ import ProjectCard from '../ProjectCard/ProjectCard' // ProjCard Component *impo
 
 import './PortfolioPage.scss' // Creating Grid Layer *import*
 import ImageSlider from '../ImageSlider/ImageSlider'
-import '../ImageSlider/ImageSlider.scss'
+import '../ImageSlider/ImageSlider2.scss'
 
 function PortfolioPage() {
   return (

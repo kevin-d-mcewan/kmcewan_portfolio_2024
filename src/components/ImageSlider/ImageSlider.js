@@ -71,27 +71,39 @@ export default function ImageSlider() {
   return (
     <div
       className="project-holder"
-      style={{ maxWidth: '1200px', margin: '0 auto', background: 'pink' }}
+      //    style={{ maxWidth: '1200px', margin: '0 auto', background: '#a4c3b2' }}
     >
     {/* <SplideTrack
       options={{
 
       }}
       > */}
+      {/* All The Projects Container */}
       <Splide
         // TODO: Change Options
         options={{
+          // This is the SPLIDE Holder for all the projects
           // we have for that project // May need to change some of the options per project. i.e. 'perPage: 3' to how many pics
-          type: 'loop',
-          perPage: 1,
-          autoplay: false,
-          gap: '3rem',
-          direction: TTB,
-          arrows: true,
-          pagination: true,
-          height: '300rem',
-          autoHeight: true,
-          rewind: true,
+          type: 'slide',               // Looping through all project cards
+          perPage: 1,                 // Shows one project card at a time 
+          perMove: 1,                 // Moves one slide at a time  
+          updateOnMove: true,         // Updates the Pagination Dots on slide move
+          autoplay: false,            // Auto Play Slides
+          gap: 0,                // Gap between each project card  
+          direction: TTB,             // Top To Bottom Scroll
+          arrows: true,               // Next/Prev Arrows from one project to another  
+          pagination: true,           // Dots Navigation
+          //height: '90rem',            // Height of the entire splide container
+          height: '95vh',
+          trimSpace: true,            // Trims space if few slides
+          focus: 'center',                  // Focus on the first slide
+          //autoHeight: true,            
+          width: '100%',               // Full Width
+          //height: '100%',              // Full Height
+          rewind: true,               // Rewinds to first slide when reaching the end
+          drag: false,                // Disables mouse/touch drag
+          wheel: false,               // Disables mouse wheel scrolling      
+          releaseWheel: false,
         }}
       >
         {projects.map((project, index) => (
@@ -104,13 +116,13 @@ export default function ImageSlider() {
                   //type: 'loop',
                   perPage: 1,
                   arrows: true,
-                  height: '30rem',
+                  height: '25rem',
                   pagination: true,
                   autoHeight: true,
                 }}
               >
                 {project.images.map((src, i) => (
-                  <SplideSlide key={i}>
+                  <SplideSlide key={i} className= "proj-img-holder">
                     <img src={src} alt={src.title} className="project-img" />
                   </SplideSlide>
                 ))}
@@ -123,9 +135,9 @@ export default function ImageSlider() {
                 &nbsp;
                 &nbsp;
                 <FontAwesomeIcon
+                  className="github-icon"
                   icon={faGithub}
-                  color="red"
-                  className="anchor-icon"
+                  color="#6b9080"
                 />
               </div>
             </div>

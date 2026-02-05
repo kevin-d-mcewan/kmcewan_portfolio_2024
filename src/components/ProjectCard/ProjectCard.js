@@ -34,7 +34,7 @@ function ProjectCard({ title, description, image, technologies, githubUrl }) {
             GitHub
             <FontAwesomeIcon
               icon={faGithub}
-              color="pink"
+              color="purple"
               className="anchor-icon"
             />
           </a>

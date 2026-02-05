@@ -1,0 +1,64 @@
+html {
+    overflow: hidden;
+}
+
+// Container for all the project cards
+.project-holder {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: #a4c3b2;
+}
+
+// Each Project Card Container
+.project-card {
+    width: 100%;
+    height: 100%;
+}
+
+// Title for the Individual Project
+.project-title {
+
+}
+
+.project-description {
+
+}
+
+.project-technologies {
+
+}
+
+.project-repo {
+
+}
+
+
+// Splide Arrows Styling
+.splide__arrow {
+  background: #6b9080;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Prevent Verticasl Scrolling inside Splide */
+// .splide__track {
+//     overflow: hidden !important;
+// }
+
+// .splide__list {
+//     overflow: hidden !important;
+// }
+
+// /* Extra saftey for Vertical Slider */
+// .splide.is-vertical {
+//     overflow: hidden;
+// }
+

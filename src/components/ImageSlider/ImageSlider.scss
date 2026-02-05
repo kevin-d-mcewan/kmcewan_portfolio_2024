@@ -1,7 +1,6 @@
 html {
   overflow: hidden;
 }
-
 .project-card {
   font-size: 20px;
   //background-color: #567896;
@@ -10,83 +9,109 @@ html {
   padding: 4rem;
   text-align: center;
   /* box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); */
-  height: 50rem;
+  /*height: 50rem;  OG Height To CHange Back If Doesn't Work*/
+  height: 75vh;
   margin: 3.3rem;
-
   border-radius: 30px 30px 30px 30px;
   box-shadow: 1.5rem 1.5rem 3rem rgb(7, 69, 35, 0.8);
   transition: transform 1.5 ease, box-shadow 0.3 ease;
   //overflow: hidden;
 }
-
+// .proj-img-holder {
+//   width: 100%;
+//   height: 100%;
+//   //background-color: lightgray;
+//   object-fit: contain;
+// }
 // The image of the project
 .project-img {
-  padding-top: 2rem;
+  //padding-top: 2rem;
+  //padding-bottom: 2rem;
   //margin-top: 1rem;
   //margin-bottom: 3rem;
-  width: 600px;
-  height: 20em; /* Fixed height for all images */
-  object-fit: contain;
-  transform: scaleX(2); // Ensures image covers the area without distortion
+  // width: 600px;
+  width: 100%;
+  height: 100%; /* Fixed height for all images */
+  //object-fit: contain;
+  
+  //object-fit: contain;
+  //transform: scaleX(2); // Ensures image covers the area without distortion
+  background-color: tomato;
 }
-
+.project-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
 // .project-card:hover {
 //   transform: translateY(-5px); // Lifts the card up slightly
 //   box-shadow: 2rem 1.5rem 1.5rem #09210b;
 // }
-
 .project-title {
-  font-size: 5rem; //   1.25rem;
+  font-size: 8rem; //   1.25rem;
   font-weight: 600;
-  //margin-bottom: 0.25rem;
-  margin-bottom: 0.25rem;
+  //margin-bottom: 3rem;
   color: #8ec3c3;
-  margin-top: -5px;
-
-  padding-top: 1rem;
+  margin-top: -10px;
+  padding-top: .5rem;
+  height: 10%;
+  background-color: purple;
 }
-
 .project-description {
-  font-size: 1.5rem; // 0.9rem;
-  color: #6b9080;
+  font-size: 2rem; // 0.9rem;
+  //color: #6b9080;
+  color: plum;
   //color: #0d4843;
   margin-bottom: 1rem;
+  margin-top: 3rem;
+  background-color: yellow;
+  height: 20%;
 }
-
+.project-technologies {
+  font-size: 2rem;
+  background-color: aqua;
+  height: 7%;
+}
+.project-repo { 
+  font-size: 2rem;
+  color: plum;
+  //margin-top: 25rem;
+  margin-bottom: 1rem;
+  background-color: maroon;
+  height: 7%;
+}
 .project-links {
   display: flex;
   gap: 1rem;
-  padding-bottom: 2rem;
+  //padding-bottom: 2rem;
+  margin-bottom: 2rem;;
   padding-left: 2rem;
   font-size: 1.5rem;
+  
 }
-
 .project-link {
   text-decoration: none;
   font-weight: 500;
   //color: pink; // Highlight Color
 }
-
 .project-link:hover {
   text-decoration: underline;
 }
-
 anchor-icon.active {
   svg {
-    color: PINK;
+    color: rgb(21, 122, 230);
   }
 }
-
 .splide__arrow {
-  background: red;
+  background: #6b9080;
   border: none;
-  color: yellow;
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  font-size: 1.5rem;
+  font-size: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
+
