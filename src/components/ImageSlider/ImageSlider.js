@@ -4,22 +4,20 @@ import Intersection from '@splidejs/splide-extension-intersection'
 import { URLHash } from '@splidejs/splide-extension-url-hash';
 import '@splidejs/splide/dist/css/splide.min.css';
 import '@splidejs/react-splide/css'
-import Baseball1 from '../../assets/images/project_images/BaseballQuiz_Unity/Baseball_Quiz_CorrectAnswer.svg'
-import Baseball2 from '../../assets/images/project_images/BaseballQuiz_Unity/Baseball_Quiz_FinalScore.svg'
-import Baseball3 from '../../assets/images/project_images/BaseballQuiz_Unity/Baseball_Quiz_Ques1.svg'
+import Baseball1 from '../../assets/images/project_images/BaseballQuiz_Unity/Baseball_Quiz_CorrectAnswer.png'
+import Baseball2 from '../../assets/images/project_images/BaseballQuiz_Unity/Baseball_Quiz_FinalScore.png'
+import Baseball3 from '../../assets/images/project_images/BaseballQuiz_Unity/Baseball_Quiz_Ques1.png'
 import Baseball4 from '../../assets/images/project_images/BaseballQuiz_Unity/Baseball_Quiz_WrongAnswer.png'
 import SnowCarver1 from '../../assets/images/project_images/SnowCarver_Game/Snow_Carver_SS1.png'
 import SnowCarver2 from '../../assets/images/project_images/SnowCarver_Game/Snow_Carver_SS2.png'
 import SnowCarver3 from '../../assets/images/project_images/SnowCarver_Game/Snow_Carver_SS3.png'
 import AstroidAvoider1 from '../../assets/images/project_images/AstroidAvoider_Unity_Game/Astroid_Avoider_UnityAndGameView.png'
-import PitchCT1 from '../../assets/images/project_images/PitchCountTracker_iOS_App/PCT_WatchOS_SimSS_2_SVG.svg'
-import PitchCT2 from '../../assets/images/project_images/PitchCountTracker_iOS_App/PCT_WatchOS_SimSS_3_SVG.svg'
-import PitchCT3 from '../../assets/images/project_images/PitchCountTracker_iOS_App/PCT_WatchOS_SimSS_4_SVG.svg'
-import PitchCT4 from '../../assets/images/project_images/PitchCountTracker_iOS_App/TrackingPitchCount_Logo.svg'
+import PitchCT1 from '../../assets/images/project_images/PitchCountTracker_iOS_App/PCT_WatchOS_SimSS_2_PNG.png'
+import PitchCT2 from '../../assets/images/project_images/PitchCountTracker_iOS_App/PCT_WatchOS_SimSS_3_PNG.png'
+import PitchCT3 from '../../assets/images/project_images/PitchCountTracker_iOS_App/PCT_WatchOS_SimSS_4_PNG.png'
 import { TTB } from '@splidejs/splide'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
-
 export default function ImageSlider() {
   const projects = [
     {
@@ -50,7 +48,7 @@ export default function ImageSlider() {
         'version of this app that does integrate with iOS and not just watchOS. That way the user can ' +
         'keep more detailed statistics of their players.',
       technologies: 'iOS, watchOS, Swift, SwiftUI',
-      images: [PitchCT1, PitchCT2, PitchCT3, PitchCT4],
+      images: [PitchCT1, PitchCT2, PitchCT3],
       repo: 'https://github.com/kevin-d-mcewan/watchOS_PitchCountTracker',
     },
     {
@@ -67,17 +65,11 @@ export default function ImageSlider() {
       repo: 'https://github.com/kevin-d-mcewan/Mobile_StarshipFighter_2.5D',
     },
   ]
-
   return (
     <div
-      className="project-holder"
-      //    style={{ maxWidth: '1200px', margin: '0 auto', background: '#a4c3b2' }}
-    >
-    {/* <SplideTrack
-      options={{
-
-      }}
-      > */}
+      className="project-holder" >
+      
+    
       {/* All The Projects Container */}
       <Splide
         // TODO: Change Options
@@ -98,7 +90,8 @@ export default function ImageSlider() {
           trimSpace: true,            // Trims space if few slides
           focus: 'center',                  // Focus on the first slide
           //autoHeight: true,            
-          width: '100%',               // Full Width
+          width: '80vw',
+          //width: '100%',               // Full Width
           //height: '100%',              // Full Height
           rewind: true,               // Rewinds to first slide when reaching the end
           drag: false,                // Disables mouse/touch drag
@@ -110,24 +103,27 @@ export default function ImageSlider() {
           <SplideSlide key={index}>
             <div className="project-card">
               <h3 className="project-title">{project.title}</h3>
-
+              <div className="project-img-holder">
+              {/* This is Image section of card */}
               <Splide
                 options={{
                   //type: 'loop',
                   perPage: 1,
                   arrows: true,
-                  height: '25rem',
+                  height: '50vh',
+                  width: '100vw',
                   pagination: true,
-                  autoHeight: true,
+                  autoHeight: false,
+                  trimSpace: true,
                 }}
               >
                 {project.images.map((src, i) => (
-                  <SplideSlide key={i} className= "proj-img-holder">
+                  <SplideSlide key={i} className="true-img">
                     <img src={src} alt={src.title} className="project-img" />
                   </SplideSlide>
                 ))}
               </Splide>
-
+              </div>
               <p className="project-description">{project.description}</p>
               <p className="project-technologies">{project.technologies}</p>
               <div className="project-repo">
