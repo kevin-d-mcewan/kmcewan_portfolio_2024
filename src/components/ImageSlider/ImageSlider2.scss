@@ -15,12 +15,12 @@ html {
     height: 100%;
     width: 100%;
 
-    display: grid;
-    grid-template-rows: 20% 60% 10% 5% 5%;
+    display: grid;      
+    grid-template-rows: 20% 50% 10% 8% 5%;
     grid-template-areas:
         "title"
         "image"
-        "description"
+        "description"           
         "tech"
         "repo";
 
@@ -84,7 +84,7 @@ html {
 
 .project-image {
     height: 100%;
-    width: 100%;
+    width: 50%;
     overflow: hidden;
 }
 
@@ -96,33 +96,60 @@ html {
 // Title for the Individual Project
 .project-title {
     
+    display: grid;                      // Setting the title portion of card to a GRID Display 
+    place-items: center;                // Centering title using place-items variable
+    margin: 1rem;                       // Margin around title container with 2rem space around
     font-size: 8rem;
-    background-color: goldenrod;
+    //background-color: goldenrod;
 }
 
 .project-description {
+    display: grid;
+    //background-color: brown;
+    font-size: 2.0rem;
+    overflow-y: visible;
+    //margin-top: 2.5rem;
+    gap: 2rem;
+    margin-bottom: 0;
+    text-align: justify;
+    margin-left: 1.5rem;
+    margin-right: 1rem;
+    line-height: 1.6;
     
-    background-color: brown;
+    
 }
 
 .project-technologies {
-    
-    background-color: cyan;
+    display: grid;
+    //background-color: cyan;
+    color: #a4c3b2;
+    //row-gap: 5px;
+    place-items: center;
+    font-size: 2.0rem;
+    gap: 0;
 }
 
 .project-repo {
-    
+    display: grid;
     color: magenta;
+    place-items: center;
+    font-size: 1.8rem;
+    gap: 0;
+    width: 100%;
+    
 }
 
 .project-img{
-    background-color: darkviolet;
-    height: 100%;
-    width: 100%;
-    padding: 1px;
-    //border: 5px solid pink;
-   // margin: 2px;
-    //object-fit: contain;
+    //background-color: darkviolet;
+    height: 95%;
+    width: 95%;
+    padding: 10px;
+}
+
+.github-icon {
+    color: darkcyan;
+    line-spacing: 0;
+    row-gap: 0px;
 }
 
 .true-img {
@@ -132,8 +159,9 @@ html {
 
 // Splide Arrows Styling
 .splide__arrow {
-  //background: #6b9080;
-  background-color: pink;
+  background-color: #6b9080;
+  //background-color: pink;
+  opacity: 0.1;
   border: none;
   width: 40px;
   height: 40px;

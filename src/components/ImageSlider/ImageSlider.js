@@ -127,14 +127,12 @@ export default function ImageSlider() {
               <p className="project-description">{project.description}</p>
               <p className="project-technologies">{project.technologies}</p>
               <div className="project-repo">
-                {project.repo}
-                &nbsp;
-                &nbsp;
-                <FontAwesomeIcon
+                {project.repo } {<FontAwesomeIcon
                   className="github-icon"
                   icon={faGithub}
                   color="#6b9080"
-                />
+                />}
+                
               </div>
             </div>
           </SplideSlide>
